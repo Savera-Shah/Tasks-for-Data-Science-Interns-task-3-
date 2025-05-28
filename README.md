@@ -50,13 +50,17 @@
 # **How to Run the Code:**
  
 **1. Upload & Setup**
+
    from google.colab
+   
    import files
+   
    uploaded = files.upload()
    
 Then upload creditcard.csv.
 
 **2. Install Required Package**
+
     !pip install -q imbalanced-learn
 
 **3. Run Code in Order:**
@@ -74,10 +78,15 @@ Then upload creditcard.csv.
 6. Try manual testing with 30 input values
 
 4. Manual Testing
+   
    print("\n Enter 30 values (Time, V1-V28, Amount):")
+   
    user_input = [float(input(f"Enter feature {i+1}: ")) for i in range(30)]
+   
    print("Result:", test_transaction(user_input))
+   
 - Example input:
+  
   Enter feature 1: 10000  
 
   Enter feature 2: -1.359807 
