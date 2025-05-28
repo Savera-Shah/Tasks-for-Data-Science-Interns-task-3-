@@ -8,7 +8,7 @@
 - Used libraries like sklearn, imblearn, pandas, numpy, and warnings.
 
  **2. Check for Imbalance**
-- Found 492 fraud transactions vs 284,315 legitimate ones → highly imbalanced.
+- Found 492 fraud transactions vs 284,315 legitimate ones and  highly imbalanced.
 
  **3. Data Preprocessing**
 - Dropped the Class column (target) to make X (features) and stored Class in y (labels).
@@ -49,7 +49,7 @@
 
 # **How to Run the Code:**
  
-**1. Upload & Setup**
+ **1. Upload & Setup**
 
    from google.colab
    
@@ -59,11 +59,11 @@
    
 Then upload creditcard.csv.
 
-**2. Install Required Package**
+ **2. Install Required Package**
 
    - !pip install -q imbalanced-learn
 
-**3. Run Code in Order:**
+ **3. Run Code in Order:**
 
 1. Load data
 
@@ -78,6 +78,8 @@ Then upload creditcard.csv.
 6. Try manual testing with 30 input values
 
 4. Manual Testing
+
+   - **CODE:**
    
 - print("\n Enter 30 values (Time, V1-V28, Amount):")
    
@@ -85,7 +87,7 @@ Then upload creditcard.csv.
    
 - print("Result:", test_transaction(user_input))
    
-- Example input:
+- **Example input:**
   
   Enter feature 1: 10000  
 
@@ -93,7 +95,7 @@ Then upload creditcard.csv.
 
   Enter feature 3: -0.072781   ...  feature 30
 
- - Output:
+ - **Output:**
 
  --Result: Legitimate Transaction  
 
