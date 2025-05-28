@@ -47,22 +47,19 @@
 
 - By manually entering your own 30 values.
 
- **How to Run the Code:**
-1. Upload & Setup
+# **How to Run the Code:**
+ 
+**1. Upload & Setup**
+   from google.colab
+   import files
+   uploaded = files.upload()
    
-from google.colab
-
-import files
-
- uploaded = files.upload()
-
 Then upload creditcard.csv.
 
-**4. Install Required Package**
+**2. Install Required Package**
+    !pip install -q imbalanced-learn
 
-!pip install -q imbalanced-learn
-
-**5. Run Code in Order:**
+**3. Run Code in Order:**
 
 1. Load data
 
@@ -77,31 +74,23 @@ Then upload creditcard.csv.
 6. Try manual testing with 30 input values
 
 4. Manual Testing
+   print("\n Enter 30 values (Time, V1-V28, Amount):")
+   user_input = [float(input(f"Enter feature {i+1}: ")) for i in range(30)]
+   print("Result:", test_transaction(user_input))
+- Example input:
+  Enter feature 1: 10000  
 
-print("\n Enter 30 values (Time, V1-V28, Amount):")
+  Enter feature 2: -1.359807 
 
-user_input = [float(input(f"Enter feature {i+1}: ")) for i in range(30)]
+  Enter feature 3: -0.072781   ...  feature 30
 
-print("Result:", test_transaction(user_input))
+ - Output:
 
-Example input:
-
-
-Enter feature 1: 10000  
-
-Enter feature 2: -1.359807 
-
-Enter feature 3: -0.072781 
-
-...  feature 30
-
-Output:
-
-Result: Legitimate Transaction  
+ --Result: Legitimate Transaction  
 
 OR  
 
-Result: Fraudulent Transaction Detected!
+-- Result: Fraudulent Transaction Detected!
 
  # **Observation :**
  
